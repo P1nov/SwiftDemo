@@ -1,0 +1,33 @@
+PODS:
+  - SnapKit (4.2.0)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - SwiftyUserDefaults (4.0.0)
+  - WCDB.swift (1.0.8.2):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
+
+DEPENDENCIES:
+  - SnapKit
+  - SwiftyUserDefaults
+  - WCDB.swift
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - SnapKit
+    - SQLiteRepairKit
+    - SwiftyUserDefaults
+    - WCDB.swift
+    - WCDBOptimizedSQLCipher
+
+SPEC CHECKSUMS:
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  SwiftyUserDefaults: 6a1951df1daa19337862b677dd9a4b9bd4c288cd
+  WCDB.swift: 05d509d7a0e60fb6e11c34eb7e4027c0fab5849f
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
+
+PODFILE CHECKSUM: 13e1d7e6197e22d3983f514201c1ea1c60596809
+
+COCOAPODS: 1.8.4
