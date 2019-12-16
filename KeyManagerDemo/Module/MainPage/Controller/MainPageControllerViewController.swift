@@ -114,6 +114,8 @@ class MainPageControllerViewController: BaseCollectionViewController {
         
         super.viewWillAppear(animated)
         
+        loadData()
+        
     }
 
     override func configUISet() {
@@ -127,6 +129,11 @@ class MainPageControllerViewController: BaseCollectionViewController {
         colorCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "colorCellId")
         collectionView.register(MainPageCollectionViewCell.self, forCellWithReuseIdentifier: "mainPageCellId")
 
+//        collectionView.pn_header = PNRefreshHeader.header(with: {
+//
+//            self.loadData()
+//        })
+        collectionView.pn_header = PNRefreshNormalHeader.header(with: self, action: #selector(loadData))
         
         self.view.addSubview(addBtn)
         
@@ -136,32 +143,20 @@ class MainPageControllerViewController: BaseCollectionViewController {
             make.right.equalToSuperview().offset(-20.0)
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(rawValue: "KeyStoreChanged"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadData), name: NSNotification.Name(rawValue: "KeyStoreChanged"), object: nil)
     }
     
     @objc func loadData() {
         
         mainPageService.getKeyStores { (success, error) in
             
-            if success {
-                
-                filterKeyStores = mainPageService.mainPageKeyStores
-                collectionView.reloadData()
-            }else {
-                
-                print("获取数据失败")
-            }
-        }
-    }
-    
-    @objc private func reloadData() {
-        
-        mainPageService.getKeyStores { (success, error) in
+            self.collectionView.pn_header?.endRefreshing()
             
             if success {
                 
                 filterKeyStores = mainPageService.mainPageKeyStores
                 collectionView.reloadData()
+                
             }else {
                 
                 print("获取数据失败")

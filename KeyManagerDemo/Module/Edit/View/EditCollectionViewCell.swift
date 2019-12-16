@@ -27,7 +27,7 @@ class EditCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         textField.returnKeyType = .done
         textField.delegate = self
         textField.isSecureTextEntry = false
-        textField.textColor = .black
+        textField.textColor = UIColor.colorWithRGB(rgb: 0x333333)
         
         return textField
     }()
@@ -39,7 +39,7 @@ class EditCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         textView.clipsToBounds = true
         textView.layer.cornerRadius = 5.0
         textView.returnKeyType = UIReturnKeyType.done
-        textView.textColor = .black
+        textView.textColor = UIColor.colorWithRGB(rgb: 0x333333)
         
         return textView
     }()

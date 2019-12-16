@@ -10,6 +10,8 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,6 +24,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         KeyDbService.shared.setUp()
+        
+        /*
+         初始化分类的初始化方法
+         */
+        UIScrollView.initializeOnceMethod()
+        
+        guard #available(iOS 13.0, *) else {
+            
+            let window = UIWindow.init(frame: UIScreen.main.applicationFrame)
+            
+            window.rootViewController = EDRootViewController.init()
+            
+            self.window = window
+            
+            window.makeKeyAndVisible()
+            
+            return true
+        }
         
         return true
     }

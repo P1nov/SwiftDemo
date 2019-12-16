@@ -284,7 +284,18 @@ class EditKeyStoreController: BaseCollectionViewController, EditCollectionViewLa
                 
                 self.decorationBackgroundColor = selectColors[indexPath.row]
                 
-                collectionView.reloadData()
+                var decorationView : EditDecorationView?
+                
+                if #available(iOS 9.0, *) {
+                    
+                    collectionView.reloadData()
+                } else {
+                    // Fallback on earlier versions
+                    
+                    collectionView.reloadData()
+                }
+                
+//                collectionView.reloadData()
                 
             }, completion: nil)
         }
