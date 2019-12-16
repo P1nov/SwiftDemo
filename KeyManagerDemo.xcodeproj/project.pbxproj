@@ -34,7 +34,6 @@
 		049232B523A084B000F07DDD /* EDPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049232B423A084B000F07DDD /* EDPresentationViewController.swift */; };
 		049232B723A09B2E00F07DDD /* EDPopUpHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049232B623A09B2E00F07DDD /* EDPopUpHUD.swift */; };
 		049232BB23A09DF900F07DDD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049232BA23A09DF900F07DDD /* UIView+Extension.swift */; };
-		049232BD23A0A1D300F07DDD /* EDTextControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049232BC23A0A1D300F07DDD /* EDTextControl.swift */; };
 		049232BF23A0B72800F07DDD /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049232BE23A0B72800F07DDD /* UIViewController+Extension.swift */; };
 		049232C723A0FA7300F07DDD /* EdAuthenicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049232C623A0FA7300F07DDD /* EdAuthenicationViewController.swift */; };
 		049232C923A0FAA300F07DDD /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049232C823A0FAA300F07DDD /* AuthenticationManager.swift */; };
@@ -96,7 +95,6 @@
 		049232B423A084B000F07DDD /* EDPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDPresentationViewController.swift; sourceTree = "<group>"; };
 		049232B623A09B2E00F07DDD /* EDPopUpHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDPopUpHUD.swift; sourceTree = "<group>"; };
 		049232BA23A09DF900F07DDD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		049232BC23A0A1D300F07DDD /* EDTextControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EDTextControl.swift; sourceTree = "<group>"; };
 		049232BE23A0B72800F07DDD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		049232C623A0FA7300F07DDD /* EdAuthenicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdAuthenicationViewController.swift; sourceTree = "<group>"; };
 		049232C823A0FAA300F07DDD /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
@@ -275,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				046ADF9A239E02270098AC13 /* MainPageCollectionViewCell.swift */,
-				049232BC23A0A1D300F07DDD /* EDTextControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -701,7 +698,6 @@
 				046ADFA0239E2B2D0098AC13 /* EditKeyStoreController.swift in Sources */,
 				046ADF9D239E20410098AC13 /* KeyStore.swift in Sources */,
 				049232B723A09B2E00F07DDD /* EDPopUpHUD.swift in Sources */,
-				049232BD23A0A1D300F07DDD /* EDTextControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

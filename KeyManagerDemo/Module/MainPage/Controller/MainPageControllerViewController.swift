@@ -126,11 +126,6 @@ class MainPageControllerViewController: BaseCollectionViewController {
         
         colorCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "colorCellId")
         collectionView.register(MainPageCollectionViewCell.self, forCellWithReuseIdentifier: "mainPageCellId")
-        
-//        collectionView.attachRefreshHeader(with: self, action: #selector(loadData)) {
-//            
-//            
-//        }
 
         
         self.view.addSubview(addBtn)
@@ -140,8 +135,6 @@ class MainPageControllerViewController: BaseCollectionViewController {
             make.bottom.equalToSuperview().offset(-20.0)
             make.right.equalToSuperview().offset(-20.0)
         }
-        
-//        addBtn.setTitle("新增", for: .normal)
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(rawValue: "KeyStoreChanged"), object: nil)
     }

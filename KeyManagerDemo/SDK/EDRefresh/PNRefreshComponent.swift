@@ -18,6 +18,28 @@ class PNRefreshComponent: UIView {
         return nil
     }
     
+    var autoChangeAlpha: Bool? {
+        
+        get {
+            
+            return automaticallyChangeAlpha
+        }
+        set(newValue) {
+            
+            if isRefreshing {
+                
+                return
+            }
+            
+            if newValue! {
+                
+                alpha = pullingPercent!
+            }
+            
+            automaticallyChangeAlpha = newValue
+        }
+    }
+    
     var scrollView: UIScrollView? {
         
         return nil
@@ -50,7 +72,10 @@ class PNRefreshComponent: UIView {
                 return
             }
             
-            if isAuto
+            if automaticallyChangeAlpha! {
+                
+                alpha = newValue!
+            }
         }
         
         get {
@@ -61,10 +86,7 @@ class PNRefreshComponent: UIView {
     
     var pullingPercent : CGFloat?
     
-    var automaticallyChangeAlpha: Bool? {
-        
-        return nil
-    }
+    var automaticallyChangeAlpha: Bool?
     
     func setRefreshing(target : AnyObject?, action : Selector?) {
         
@@ -72,8 +94,6 @@ class PNRefreshComponent: UIView {
     }
     
     func executeRefreshingCallback() {
-        
-        let asyncQueue = DispatchQueue.init(label: "com.pn.refresh.excute")
         
         DispatchQueue.main.async {
             
@@ -102,22 +122,47 @@ class PNRefreshComponent: UIView {
     
     func begingRefreshing() {
         
+        UIView.animate(withDuration: 0.25) {
+            
+            self.alpha = 1.0
+        }
         
+        pullingPercent = 1.0
+        
+        if self.window != nil {
+            
+            state = .loading
+        }else {
+            
+            if state != .loading {
+                
+                state = .willLoad
+                
+                self.setNeedsDisplay()
+            }
+        }
     }
     
     func begingRefreshing(CompletionBlock : PNRefreshComponentAction?) {
         
+        self.begingRefreshingCompletionBlock = CompletionBlock
         
+        self.begingRefreshing()
     }
     
     func endRefreshing() {
         
-        
+        DispatchQueue.main.async {
+            
+            self.state = .idle
+        }
     }
     
     func endRefreshing(CompletionBlock : PNRefreshComponentAction?) {
         
+        self.endRefreshingCompletionBlock = CompletionBlock;
         
+        self.endRefreshing()
     }
     
     func prepare() {
