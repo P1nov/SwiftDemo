@@ -45,6 +45,7 @@
 		049232C923A0FAA300F07DDD /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049232C823A0FAA300F07DDD /* AuthenticationManager.swift */; };
 		0496036323A39156009E75DD /* PNRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496036223A39156009E75DD /* PNRefreshComponent.swift */; };
 		04D25A61239F35790036D1A6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D25A60239F35790036D1A6 /* UIImage+Extension.swift */; };
+		04F5460123A86C7600373E8C /* PNProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5460023A86C7600373E8C /* PNProgressHUD.swift */; };
 		142AB8E8C55F486F9529CB97 /* Pods_KeyManagerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F269E08A807303BC69E8ECEF /* Pods_KeyManagerDemo.framework */; };
 		390F390409EA997BE1BE895B /* Pods_KeyManagerDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2EBFF8FAD91FB3E5E63977 /* Pods_KeyManagerDemoTests.framework */; };
 		6E87FA55042696D84841FB75 /* Pods_KeyManagerDemo_KeyManagerDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF70CCC4B12EC2D9C48B3224 /* Pods_KeyManagerDemo_KeyManagerDemoUITests.framework */; };
@@ -112,6 +113,7 @@
 		049232C823A0FAA300F07DDD /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		0496036223A39156009E75DD /* PNRefreshComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNRefreshComponent.swift; sourceTree = "<group>"; };
 		04D25A60239F35790036D1A6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		04F5460023A86C7600373E8C /* PNProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNProgressHUD.swift; sourceTree = "<group>"; };
 		345EAB0A65C590D87779D3F0 /* Pods-KeyManagerDemo-KeyManagerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyManagerDemo-KeyManagerDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-KeyManagerDemo-KeyManagerDemoUITests/Pods-KeyManagerDemo-KeyManagerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C2EBFF8FAD91FB3E5E63977 /* Pods_KeyManagerDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyManagerDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19654C6146986AD40A6E245 /* Pods-KeyManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyManagerDemo.release.xcconfig"; path = "Target Support Files/Pods-KeyManagerDemo/Pods-KeyManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				049232B623A09B2E00F07DDD /* EDPopUpHUD.swift */,
+				04F5460023A86C7600373E8C /* PNProgressHUD.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				046ADFA7239E314C0098AC13 /* EditService.swift in Sources */,
 				049232BF23A0B72800F07DDD /* UIViewController+Extension.swift in Sources */,
 				046ADF5C239DFF1C0098AC13 /* AppDelegate.swift in Sources */,
+				04F5460123A86C7600373E8C /* PNProgressHUD.swift in Sources */,
 				0496036323A39156009E75DD /* PNRefreshComponent.swift in Sources */,
 				04509FD423A24DEC004DABF5 /* EDAuthenticationSettingViewController.swift in Sources */,
 				0417EFCD23A725D5008E7984 /* PNRefreshScrollView+Extension.swift in Sources */,

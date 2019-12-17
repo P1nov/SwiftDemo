@@ -44,7 +44,7 @@ class PNRefreshNormalHeader: PNRefreshHeader {
         loadingView.snp.makeConstraints { (make) in
             
             make.centerY.equalToSuperview()
-            make.right.equalTo(self.snp_centerX).offset(-5.0)
+            make.right.equalTo(self.snp_centerX).offset(-20.0)
         }
         
         arrowImageView.snp.makeConstraints { (make) in
@@ -55,7 +55,7 @@ class PNRefreshNormalHeader: PNRefreshHeader {
         titleLabel.snp.makeConstraints { (make) in
             
             make.centerY.equalToSuperview()
-            make.left.equalTo(self.snp_centerX).offset(5.0)
+            make.left.equalTo(self.loadingView.snp_right).offset(5.0)
         }
     }
     
@@ -112,9 +112,9 @@ class PNRefreshNormalHeader: PNRefreshHeader {
         
         if newState == .idle {
             
+            titleLabel.text = "松开取消刷新"
+            
             if oldState == .loading {
-                
-                titleLabel.text = "松开取消刷新"
                 
                 UIView.animate(withDuration: PNRefreshSlowAnimationDuration, animations: {
                     

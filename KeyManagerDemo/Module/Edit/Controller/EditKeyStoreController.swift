@@ -286,6 +286,9 @@ class EditKeyStoreController: BaseCollectionViewController, EditCollectionViewLa
                 
                 var decorationView : EditDecorationView?
                 
+//                collectionView.supplementaryView(forElementKind: DecorationViewElementKind, at: indexPath)
+//                collectionView.collectionViewLayout.attr
+                
                 if #available(iOS 9.0, *) {
                     
                     collectionView.reloadData()

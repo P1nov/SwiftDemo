@@ -146,6 +146,7 @@ class EditCollectionViewLayout: UICollectionViewFlowLayout {
             
             return rect.intersects($0.frame)
         })
+        
         return attrs
     }
     
