@@ -10,6 +10,7 @@ import Foundation
 
 let PNRefreshLabelLeftInset = 25.0
 let PNRefreshHeaderHeight = 54.0
+let PNRefreshFooterHeight = 44.0
 let PNRefreshFastAnimationDuration = 0.25
 let PNRefreshSlowAnimationDuration = 0.4
 
@@ -19,6 +20,6 @@ let PNRefreshHeaderIdleText = "PNRefreshHeaderIdleText"
 let PNRefreshHeaderPullingText = "PNRefreshHeaderPullingText"
 let PNRefershHeaderRefreshingText = "PNRefreshHeaderRefreshingText"
 
-var PNRefreshHeaderKey : UnsafeRawPointer? = UnsafeRawPointer.init(bitPattern: "PNRefreshHeaderKey".hashValue)
+
 
 

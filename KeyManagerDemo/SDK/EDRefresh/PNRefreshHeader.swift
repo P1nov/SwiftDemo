@@ -156,9 +156,9 @@ import UIKit
         super.setState(newState: newState)
         
 //        if !PNRefresh.checkState(oldState: self.state, newState: newState) {
-//            
+//
 //            return
-//            
+//
 //        }
         
         state = newState

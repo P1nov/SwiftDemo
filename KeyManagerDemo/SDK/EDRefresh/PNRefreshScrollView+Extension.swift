@@ -200,24 +200,28 @@ extension UIScrollView {
 
 extension UIScrollView {
     
-//    var pn_header_ : PNRefreshHeader? {
-//
-//        get {
-//
-//            return pn_header
-//        }
-//
-//        set(newValue) {
-//
-//            if newValue != pn_header {
-//
-//                self.pn_header?.removeFromSuperview()
-//                self.insertSubview(newValue!, at: 0)
-//
-//                objc_setAssociatedObject(self, &UIScrollView.PNRefreshHeaderKey, newValue, .OBJC_ASSOCIATION_RETAIN)
-//            }
-//        }
-//    }
+    @objc var pn_footer : PNRefreshFooter? {
+        
+        get {
+            
+            let key = UnsafeRawPointer.init(bitPattern: "PNRefreshFooterKey".hashValue)
+            
+            let footer : PNRefreshFooter = objc_getAssociatedObject(self, key!) as! PNRefreshFooter
+            
+            return footer
+        }
+        
+        set(newValue) {
+            
+            newValue?.removeFromSuperview()
+            newValue?.frame.size.width = self.frame.width
+            self.insertSubview(newValue!, at: 0)
+            
+            let key = UnsafeRawPointer.init(bitPattern: "PNRefreshFooterKey".hashValue)
+            
+            objc_setAssociatedObject(self, key!, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
     
     @objc var pn_header : PNRefreshHeader? {
         
